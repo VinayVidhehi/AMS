@@ -1,7 +1,7 @@
 const express = require('express');
 const cors = require('cors');
 const bodyParser = require('body-parser');
-const { handleUserLogin, handleUserSignup, attendanceUpdate, getAttendance, getStaffAttendance, updateCourseDetails } = require('./utils/router');
+const { handleUserLogin, handleUserSignup, attendanceUpdate, getAttendance, getStaffAttendance } = require('./router');
 
 const app = express();
 const PORT = 7800;
@@ -21,7 +21,6 @@ app.get('/attendance-staffview', getStaffAttendance)
 
 app.post('/signup', handleUserSignup);
 app.post('/login', handleUserLogin);
-app.post('/update-course', updateCourseDetails);
 
 
 
